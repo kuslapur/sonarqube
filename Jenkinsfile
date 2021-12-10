@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment {
+        PATH = "PATH=$PATH:/opt/apache-maven-3.8.4/bin"
+    }
     stages {
         stage('fetch_code') {
             steps {
